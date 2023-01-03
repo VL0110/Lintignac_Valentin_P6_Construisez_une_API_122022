@@ -1,0 +1,19 @@
+{
+  "name": "hottakes",
+  "version": "1.0.0",
+  "description": "Construisez une API sécurisée pour une application d'avis gastronomiques",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "Valentin Lintignac",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "mongoose": "^6.8.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
