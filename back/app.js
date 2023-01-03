@@ -7,9 +7,11 @@ const sauceRoutes = require ('./routes/sauces')
 const path = require('path');
 const dotenv = require('dotenv').config();
 console.log(dotenv.parsed)
-mongoose.connect(process.env.MONGODB_URI,
+mongoose.set('strictQuery', false);
+mongoose.connect('mongodb+srv://vl0110:_J_apXSNe2djd4B@cluster28.o2e0bh6.mongodb.net/?retryWrites=true&w=majority', 
   { useNewUrlParser: true,
-    useUnifiedTopology: true })
+    useUnifiedTopology: true }
+    )
   .then(() => console.log('Connexion à MongoDB réussie !'))
   .catch(() => console.log('Connexion à MongoDB échouée !'));
 const app = express();
