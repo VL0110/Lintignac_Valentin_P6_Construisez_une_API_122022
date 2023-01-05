@@ -1,4 +1,4 @@
-// Lancer user :
+// Implantation moddules :
 
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
@@ -30,7 +30,7 @@ exports.login = (req, res, next) => {
             }
             bcrypt.compare(req.body.password, user.password) 
 
-            // Comparaison du mot de passe entré par l'utilisateur avec le hash enregistré dans la base de données
+            // Comparaison du mot de passe entré par l'utilisateur avec le hash enregistré dans la base de données (jwt)
             
                 .then(valid => {
                     if (!valid) {

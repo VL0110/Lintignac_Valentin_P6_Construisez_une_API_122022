@@ -5,7 +5,7 @@ const fs = require("fs");
 
 // Le file system pour accéder aux fonctions pour de modifier le système de fichiers et supprimer les fichiers
 
-// Créer une sauce 
+// Objet utilisable
 
 exports.createSauce = (req, res, next) => {
     const sauceObject = JSON.parse(req.body.sauce);
@@ -74,8 +74,6 @@ exports.modifySauce = (req, res, next) => {
       });
   };
   
-
-
 
 // Supprimer sauce 
 
