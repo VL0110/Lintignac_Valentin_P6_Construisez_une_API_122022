@@ -1,11 +1,13 @@
-// Lancer models :
+// Lancer models + fs :
 
 const Sauce = require("../models/Sauce");
 const fs = require("fs"); 
 
-// Le file system pour accéder aux fonctions pour de modifier le système de fichiers et supprimer les fichiers
+// Le file system pour accéder aux fonctions pour modifier le système de fichiers et supprimer les fichiers
 
-// Objet utilisable
+// CRUD
+
+// Objet utilisable 
 
 exports.createSauce = (req, res, next) => {
     const sauceObject = JSON.parse(req.body.sauce);
@@ -113,6 +115,7 @@ exports.getAllSauce = (req, res, next) => {
   };
 
 // Pour liker et disliker sauce 
+
 exports.likedSauce = (req, res, next) => {
     console.log("like");
     console.log(req.params);
